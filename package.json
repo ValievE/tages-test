@@ -1,6 +1,6 @@
 {
-  "name": "emptyproject",
-  "version": "0.0.0",
+  "name": "tages-test",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@vue/eslint-config-airbnb-with-typescript": "^8.0.0",
-    "normalize.css": "^8.0.1",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3",
     "vite": "^5.3.1"

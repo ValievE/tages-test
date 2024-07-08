@@ -1,0 +1,64 @@
+@import url(./app_normalize.css);
+
+@font-face {
+  font-family: 'SF UI Text';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('./assets/fonts/SF_UI_Text/SFUIText-Regular.ttf') format('ttf'),
+    url('./assets/fonts/SF_UI_Text/SFUIText-Regular.woff') format('woff'),
+    url('./assets/fonts/SF_UI_Text/SFUIText-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('./assets/fonts/SF_UI_Text/SFUIText-Medium.ttf') format('ttf'),
+    url('./assets/fonts/SF_UI_Text/SFUIText-Medium.woff') format('woff'),
+    url('./assets/fonts/SF_UI_Text/SFUIText-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('./assets/fonts/SF_Pro_Display/SFProDisplay-Regular.ttf') format('ttf'),
+    url('./assets/fonts/SF_Pro_Display/SFProDisplay-Regular.woff') format('woff'),
+    url('./assets/fonts/SF_Pro_Display/SFProDisplay-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('./assets/fonts/SF_Pro_Display/SFProDisplay-Medium.ttf') format('ttf'),
+    url('./assets/fonts/SF_Pro_Display/SFProDisplay-Medium.woff') format('woff'),
+    url('./assets/fonts/SF_Pro_Display/SFProDisplay-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url('./assets/fonts/SF_Pro_Display/SFProDisplay-Semibold.ttf') format('ttf'),
+    url('./assets/fonts/SF_Pro_Display/SFProDisplay-Semibold.woff') format('woff'),
+    url('./assets/fonts/SF_Pro_Display/SFProDisplay-Semibold.woff2') format('woff2');
+}
+
+* {
+  font-family: 'SF UI Text', Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  cursor: default;
+}

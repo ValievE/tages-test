@@ -1,4 +1,4 @@
-require('@rushstack/eslint-patch/modern-module-resolution')
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
@@ -46,4 +46,4 @@ module.exports = {
       files: ['./**/*.js', './vite-env.d.ts']
     }
   ]
-}
+};

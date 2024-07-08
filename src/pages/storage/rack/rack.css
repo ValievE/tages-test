@@ -1,0 +1,354 @@
+.rack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.rack__title {
+  margin: 0;
+  font-size: 36px;
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: 0.16px;
+}
+
+.catalog {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
+.filters {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 288px);
+  gap: 24px;
+  padding-bottom: 10px;
+}
+
+.filters__button {
+  display: none;
+}
+
+.filters::-webkit-scrollbar {
+  height: 8px;
+}
+
+.filters::-webkit-scrollbar-track {
+  background-color: #ffffff00;
+}
+
+.filters::-webkit-scrollbar-thumb {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  height: 5px;
+}
+
+.filter {
+  width: 288px;
+  min-width: 288px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.filter__title {
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  color: #4f4f4f;
+  letter-spacing: 0.35px;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 3px 0 0 16px;
+}
+
+.filter__select {
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  font-size: 14px;
+  width: 100%;
+  height: 40px;
+  background-color: #f2f2f2;
+  border: none;
+  outline: none;
+  padding: 0 12px 2px 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.filter__select_active {
+  outline: 1px solid rgb(199, 199, 199);
+}
+
+.filter__select::after {
+  position: absolute;
+  content: '';
+  right: 19px;
+  bottom: 0;
+  background-image: url('/img/icons/icon_arrow.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 100%;
+}
+
+.filter__select_active::after {
+  rotate: 180deg;
+}
+
+.filter__options {
+  position: absolute;
+  top: 100%;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  background-color: #f2f2f2;
+  outline: 1px solid rgb(199, 199, 199);
+  box-sizing: border-box;
+}
+
+.filter__option {
+  text-align: start;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-top: 1px solid rgb(199, 199, 199);
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 12px 2px 12px;
+}
+
+.filter__option:hover {
+  background-color: #dddddd;
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 48px;
+  grid-auto-rows: 352px;
+}
+
+.card {
+  width: 336px;
+  height: 352px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10px 13px;
+  justify-content: end;
+  background-color: white;
+  position: relative;
+  outline: 1px solid #eeeeee;
+}
+
+.discount {
+  position: absolute;
+  font-family: 'SF Pro Display', Arial, sans-serif;
+  font-weight: 500;
+  color: white;
+  width: 81px;
+  height: 24px;
+  font-size: 14px;
+  background-color: #eb5757;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  left: 0;
+}
+
+.card__image {
+  width: 238px;
+  height: 237px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto auto auto;
+}
+
+.card__labels {
+  margin-bottom: 9px;
+}
+
+.card__code {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: #888888;
+  margin-bottom: 11px;
+}
+
+.card__title {
+  width: 228px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.18px;
+  margin: 5px 0 0 0;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.card__prices {
+  display: flex;
+  gap: 10px;
+  cursor: default;
+}
+
+.card__price {
+  letter-spacing: 0.1px;
+}
+
+.card__price_disabled {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+.card__buttons {
+  display: flex;
+  gap: 26px;
+  margin-right: 8px;
+}
+
+.card__button {
+  width: 22px;
+  height: 22px;
+  background-color: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 1488px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    width: 100%;
+    height: 352px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px 13px;
+    justify-content: end;
+    background-color: white;
+    position: relative;
+    outline: 1px solid #eeeeee;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 24px;
+  }
+
+  .card__image {
+    width: 100%;
+    height: 237px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto auto auto;
+  }
+
+  .card__title {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.18px;
+    margin: 5px 0 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .filters {
+    display: flex;
+    width: fit-content;
+    height: 40px;
+    flex-direction: column;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+  }
+
+  .filters_opened {
+    height: fit-content;
+    padding-top: 70px;
+    overflow: visible;
+  }
+
+  .filters__button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    font-size: 14px;
+    width: 288px;
+    height: 40px;
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+    padding: 0 12px 2px 12px;
+    z-index: 9999;
+  }
+
+  .filter {
+    width: 288px;
+    min-width: 288px;
+    height: 64px;
+    min-height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 450px;
+    height: 352px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px 13px;
+    justify-content: end;
+    background-color: white;
+    position: relative;
+    outline: 1px solid #eeeeee;
+    margin: 0 auto;
+  }
+}
