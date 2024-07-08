@@ -3,12 +3,12 @@
   width: 1488px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 29px;
   box-sizing: border-box;
 }
 
 .navigation {
-  margin-top: 32px;
+  margin-top: 29px;
   width: 100%;
   display: flex;
 }
@@ -57,7 +57,7 @@
   .navigation__list {
     display: flex;
     flex-direction: column;
-    gap: 13.5px;
+    gap: 10px;
   }
 
   .navigation__separator {
