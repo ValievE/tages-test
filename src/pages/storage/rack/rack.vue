@@ -6,20 +6,16 @@
         <button class="filters__button" @click="isFiltersOpened = !isFiltersOpened">
           {{ isFiltersOpened ? 'Скрыть фильтры' : 'Показать фильтры' }}
         </button>
-        <!-- <div v-for="filter in filters" :key="filter.id" class="filter">
-          <h2 class="filter__title">{{ filter.name }}</h2>
-          <select v-model="filter.input" class="filter__select" @change="acceptFilters">
-            <option
-              v-for="fValue in filter.values"
-              :key="fValue.id"
-              :value="fValue.id"
-              class="filter__option"
-            >
-              {{ fValue.name }}
-            </option>
-          </select>
-        </div> -->
-        <div v-for="filter in filters" :key="filter.id" class="filter">
+        <div
+          v-for="filter in filters"
+          :key="filter.id"
+          v-click-outside="
+            () => {
+              closeSelect(filter.id);
+            }
+          "
+          class="filter"
+        >
           <h2 class="filter__title">{{ filter.name }}</h2>
           <button
             class="filter__select"
@@ -122,6 +118,12 @@ const actualList = ref<CatalogObject[]>([]);
 const isFiltersOpened = ref<boolean>(false);
 
 const isSelectOpened = ref<number | null>(null);
+
+const closeSelect = (id: number) => {
+  if (isSelectOpened.value === id) {
+    isSelectOpened.value = null;
+  }
+};
 
 const button = {
   cart: {

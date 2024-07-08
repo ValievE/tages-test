@@ -28,6 +28,7 @@
   grid-template-columns: repeat(4, 288px);
   gap: 24px;
   padding-bottom: 10px;
+  user-select: none;
 }
 
 .filters__button {
